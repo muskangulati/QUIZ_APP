@@ -1,0 +1,103 @@
+ol {
+    margin-top: 30px;
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+ol li {
+    margin-left: 30px;
+}
+
+.radio-options {
+    margin-bottom: 5px;
+    margin-left: 26.5 rem;
+    padding: 4px;
+}
+
+.option {
+    border: 2px solid #979797;
+    font-family: Space Mono, monospace;
+    font-size: 20px;
+    color: #0f0900;
+    background-color: lightgoldenrodyellow;
+    width: 39rem !important;
+    height: auto;
+    padding: 5px 5px 0 30px;
+    margin-left: 95px;
+    vertical-align: middle;
+}
+
+.option:hover {
+    outline: 2px solid #007aff;
+}
+
+.is-correct {
+    background-color: #00c853 !important;
+}
+
+.is-incorrect {
+    background-color: #f00 !important;
+}
+
+.feedback-icon {
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+    margin-top: -25px;
+}
+
+section.messages {
+    display: flex;
+    justify-content: center;
+}
+
+section.messages .message {
+    font-family: Space Mono, monospace;
+    font-weight: 900;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center !important;
+    margin: 10px 0 0 0;
+    padding: 10px !important;
+    width: 32rem !important;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    margin-top: 10px !important;
+}
+
+section.messages .correct-message {
+    font-weight: 900;
+    font-style: italic;
+    border: 2px solid #007aff;
+    border-radius: 5px;
+    color: #00c853 !important;
+}
+
+section.messages .wrong-message {
+    font-weight: 900;
+    font-style: italic;
+    border: 2px solid #f00;
+    border-radius: 5px;
+    color: #f00 !important;
+    padding: 5px;
+}
+
+section.messages mat-icon.sentiment {
+    font-size: 30px !important;
+    color: #9acd32;
+    margin-right: -50px !important;
+    vertical-align: top;
+    margin-top: 18px;
+}
+
+section.messages pre {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+::ng-deep .mat-radio-button .mat-radio-container {
+    display: none;
+}

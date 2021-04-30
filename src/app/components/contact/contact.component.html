@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+<div class="container form">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="row">
+        <div class="form-group col-md-12">
+          <h2>Tell us About Yourself</h2>
+          <p style="color: #000">Contact us !!</p>
+        </div>
+      </div>
+      <form name="contactForm" id="contactForm" method="POST" action="">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="control-group">
+              <label>First Name</label>
+              <input type="text" class="demo-default form-control" placeholder="First Name" required="true">
+            </div>
+            <div class="control-group">
+              <label>Last Name</label>
+              <input type="text" class="demo-default form-control" placeholder="Last Name">
+            </div>
+            <div class="control-group">
+              <label>College</label>
+              <input type="text" class="demo-default form-control" placeholder="College" required="true">
+            </div>
+            <div class="control-group">
+              <label>Phone #</label>
+              <input type="text" class="demo-default form-control" placeholder="Phone #" required="true">
+            </div>
+            <div class="control-group">
+              <label>Email</label>
+              <input type="email" class="demo-default form-control" required="true" placeholder="yourname@domain.com">
+            </div>
+            
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="form-group col-md-12 text-center">
+          
+            <input type="submit" class="btn btn-primary" value="Contact Us" onSubmit="contact()">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-5 contact-right-info">
+    <h2>Reach Us Directly!!</h2>
+      <h2>QUIZZLER CORPORATION</h2>
+      <p style="color: #000000">B-2 Malviya Nagar, New Delhi<br />
+      
+      </p>
+      <h2>EMAIL ADDRESS</h2>
+      <a href="mailto:muskangulati.26@gmail.com">muskangulati.26@gmail.com</a>
+     
+      <h2>SUPPORT</h2>
+      
+      <a href="mailto:support@quizzler.com">support.quizzler.com</a>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

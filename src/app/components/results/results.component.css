@@ -1,0 +1,249 @@
+mat-card-header {
+    display: block;
+}
+
+mat-card-header .header-image {
+    margin-left: 10px;
+}
+
+mat-card-header .mat-card-container {
+    float: right;
+    margin-top: 0;
+    margin-right: 15px;
+    margin-left: -5px !important;
+    text-align: center;
+}
+
+section.results {
+    display: block;
+    clear: both;
+}
+
+section.results h3 {
+    text-align: center;
+}
+
+section.results img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+section.results section.statistics h3,
+section.results section.statistics span,
+section.results section.statistics .quiz-feedback,
+section.results section.statistics div span {
+    text-align: center;
+}
+
+section.results section.statistics span {
+    display: block;
+}
+
+section.results section.statistics .quiz-feedback {
+    margin-top: 20px;
+}
+
+.great-job {
+    background: url('../../../assets/images/download.png') no-repeat center center;
+    object-fit: cover;
+    border: none;
+}
+
+.not-bad {
+    background: url('../../../assets/images/download.jfif') no-repeat center center;
+    background-size: contain;
+}
+
+.try-again {
+    background: url('../../../assets/images/crop.jfif') no-repeat center center;
+    background-size: contain;
+}
+
+.great-job,
+.not-bad,
+.try-again {
+    display: inline-block !important;
+    background-size: 100% !important;
+    border: 0 !important;
+    margin: -15px 0 0 -5px;
+    height: 160px !important;
+    width: 160px !important;
+}
+
+.great-job h3,
+.not-bad h3,
+.try-again h3 {
+    margin-top: -40px !important;
+}
+
+section.results section.quizSummary {
+    display: flex;
+    flex-direction: column;
+}
+
+section.results section.quizSummary details {
+    display: block;
+}
+
+section.results section.quizSummary details summary {
+    font-size: 16px;
+    color: #007aff;
+    font-weight: 900;
+    margin-bottom: 20px;
+    outline: none;
+    text-align: center;
+}
+
+.statistics {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #4267b2;
+}
+
+section.results section.quizSummary details accordion {
+    padding-bottom: 20px;
+}
+
+section.results section.quizSummary details accordion-group:hover {
+    outline: blue;
+}
+
+section.results section.quizSummary details span.accordion-heading {
+    background-color: #f5f5f5 !important;
+    color: #0f0000 !important;
+}
+
+section.results section.quizSummary details .quiz-summary-question {
+    font-family: Space Mono, monospace;
+    font-size: 14px;
+    border: 2px solid #385d8a;
+    border-radius: 5px;
+    color: #0f0900;
+    background-color: #f5f5f5;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: left;
+}
+
+section.results section.quizSummary details .quiz-summary-question .quiz-summary-field {
+    display: block !important;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+section.results section.quizSummary details .quiz-summary-question .quiz-summary-field span {
+    display: inline !important;
+    text-align: left;
+    font-size: 16px;
+    color: #00008b;
+}
+
+section.results section.quizSummary details .quiz-summary-question .quiz-summary-field span.leader {
+    font-weight: 900;
+}
+
+section.results section.quizSummary details .quiz-summary-question .quiz-summary-field mat-icon {
+    font-size: larger;
+    top: 10px !important;
+}
+
+section.results section.quizSummary details .quiz-summary-question .quiz-summary-field mat-icon.correct {
+    color: #006400 !important;
+    font-weight: 900;
+}
+
+section.results section.quizSummary details .quiz-summary-question .quiz-summary-field mat-icon.incorrect {
+    color: #f00 !important;
+    font-weight: 900;
+}
+
+section.return {
+    clear: left;
+    text-align: center;
+    margin-top: -10px;
+}
+
+section.return a.btn {
+    margin-right: 15px;
+    background-color: #20b2aa;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+section.challenge-social {
+    text-align: center;
+}
+
+section.challenge-social .social-buttons {
+    display: block;
+}
+
+section.challenge-social .social-buttons a.btn {
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 9px 15px 8px 42px;
+    background: no-repeat 10px 5px;
+    background-size: 25px 25px;
+    color: white;
+}
+
+section.challenge-social .social-buttons a.btn.facebook {
+    background-color: #4267b2;
+    /*background-image: url('../../../assets/images/facebook.gif');*/
+    top: 5px;
+}
+
+section.challenge-social .social-buttons a.btn.email {
+    background-color: #f0a121;
+    background-image: url('../../../assets/images/email.jpg');
+    top: 5px;
+    margin-left: 20px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+a.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+a.btn::after {
+    display: none;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    /* Center the ripple */
+    top: 50%;
+    left: 50%;
+    animation: ripple 1s;
+    opacity: 0;
+}
+
+a.btn:focus:not(:active)::after {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+@keyframes ripple {
+    from {
+        opacity: 1;
+        transform: scale(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(10);
+    }
+}

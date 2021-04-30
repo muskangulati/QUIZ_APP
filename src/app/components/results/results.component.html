@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+
+<mat-card>
+ 
+
+  
+  <mat-card-content>
+    <section class="results">
+      <section class="statistics">
+        <h1>SCORE</h1>
+        <span>You scored {{ correctAnswersCount }} out of {{ totalQuestions }} questions correctly.</span>
+        <span>You completed the quiz in {{ elapsedMinutes }} minutes and {{ elapsedSeconds }} seconds.</span>
+
+        <div class="quiz-feedback">
+          <div *ngIf="percentage >= 80">
+            <img class="great-job"  >
+            <h3>Great job! </h3>
+          </div>
+          <div *ngIf="percentage >= 60 && percentage < 80">
+            <img class="not-bad">
+            <h3>Not bad! </h3>
+          </div>
+          <div *ngIf="percentage < 60">
+            <img class="try-again"  >
+            <h3>Try again! </h3>
+          </div>
+
+          <span *ngIf="elapsedMinutes < 1">You scored {{ percentage }}% correctly (and quickly)!</span>
+          <span *ngIf="elapsedMinutes > 1">You scored {{ percentage }}% correct.</span>
+        </div>
+      </section>
+
+      <section class="quizSummary">
+        <details>
+          <summary>Look at more detailed summary of your quiz</summary>
+          <accordion>
+            
+
+            <accordion-group #quizQuestion role="tab" *ngFor="let question of allQuestions">
+              <span accordion-heading class="accordion-heading">
+                <span>
+                  <strong>Question #{{ question.questionId }}: </strong>  <em>{{ question.questionText }}</em>
+                </span>
+                <span class="badge badge-secondary float-right pull-right">
+                  <i class="fa" [ngClass]="{'fa-chevron-up': quizQuestion.isOpen, 'fa-chevron-down': !quizQuestion.isOpen}"></i>
+                </span>
+              </span>
+
+              <div class="quiz-summary-question">
+                <div class="quiz-summary-field">
+                  <span>
+                    <span class="leader">Question #{{ question.questionId }}: </span>{{ question.questionText }}
+                  </span>
+                </div>
+                <div class="quiz-summary-field">
+                  <span>
+                    <span class="leader">Your Answer: </span>
+                    Option {{ question.selectedOption }} &mdash; {{ question.options[question.selectedOption - 1].optionText }}
+                    <mat-icon class="correct" *ngIf="question.answer === question.selectedOption">done</mat-icon>
+                    <mat-icon class="incorrect" *ngIf="question.answer !== question.selectedOption">clear</mat-icon>
+                    <span *ngIf="question.selectedOption === ''"> (no answer provided)</span>
+                  </span>
+                </div>
+                <div class="quiz-summary-field">
+                  <span>
+                    <span class="leader">Correct Answer: </span>
+                    Option {{ question.answer }} &mdash; {{ question.options[question.answer - 1].optionText }}
+                  </span>
+                </div>
+                <div class="quiz-summary-field">
+                  <span>
+                    <span class="leader">Explanation: </span>
+                    Option {{ question.answer }} was correct because {{ question.explanation }}.
+                  </span>
+                </div>
+              </div>
+            </accordion-group>
+          </accordion>
+        </details>
+      </section>
+    </section>
+
+    <section class="return">
+      <mat-card-actions>
+        <a routerLink="/intro" class="btn">Restart Quiz</a>
+        
+      </mat-card-actions>
+    </section>
+
+    <hr />
+
+    <section class="challenge-social">
+      <h4>Challenge your friends!</h4>
+      <div class="social-buttons">
+        <a class="btn email"
+           href="mailto:?subject=Try to beat my quiz score!&amp;body=I scored {{ percentage }}% on this awesome Angular quiz. Try to beat my score at {{ codelabUrl }}">Email a friend</a>
+        
+      </div>
+    </section>
+  </mat-card-content>
+</mat-card>
+
+<app-footer></app-footer>
